@@ -1,0 +1,200 @@
+:root{
+    --primary: #2374AB;
+    --secondary: #EFCA08;
+    --accent: #138A36; 
+    --black: #001011; 
+    --white: #FFFFFC;
+    --red: #AE0E00;  
+  }
+  body{
+    background-color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+  } 
+  strong{
+    font-size: large;
+  }
+  .headDiv{
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    text-align: center;
+  }
+  .headInfo{
+    margin-top: 100px;
+    color: var(--white);
+    text-align: center;
+  }
+  .addTaskDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+    border-radius: 8px;
+    color: var(--white);
+    position: fixed; 
+    bottom: 250px;
+    left: 20px;
+    right: 20px; 
+    font-size: larger;
+    box-shadow: 0 0 20px var(--black);
+    animation: slideDown 1s forwards;
+  }
+  .inputBox{
+    height: 35px;
+    border: solid 1px;
+    border-radius: 8px;
+    width: 90%;
+    font-size: large;
+  }
+  .addButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: var(--white);
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    box-shadow: 2px 4px 8px var(--black);
+    cursor: pointer; 
+    animation: slideUp .5s forwards;
+  }
+  .addButton:active{
+    transform: translateY(3px);
+  }
+  .addTaskButton{
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    border: solid 3px transparent;
+    margin: 20px 20px;
+    cursor: pointer;
+  }
+  .addTaskButton:hover{
+    background-color: var(--white);
+    border: solid 3px var(--secondary);
+    color: black;
+    transition: all .3s;
+  }
+  .deleteDiv{
+    position: sticky;
+    top: 10px;
+    text-align: end;
+    opacity: 0;
+  }  
+  .deleteBtn{
+    background-color: var(--red);
+    color: var(--white);
+    border: solid 2px transparent;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .deleteBtn:hover{
+    background-color: var(--white);
+    color: var(--black);
+    border: solid 2px var(--red);
+  }
+  .checkAndNameDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .check{
+    border: solid var(--black);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: var(--white);
+    transition: all 1s;
+  }
+  .check:hover{
+    cursor: pointer;
+  }
+  .checkMark{
+    border: solid var(--white);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--black);
+    margin: 0 10px;
+    opacity: .5;
+    transition: all 1s;
+  }
+  .checkMark:hover{
+    cursor: pointer;
+  }
+  .closeX{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .closeX:hover{
+    color: var(--black);
+    transition: all .4s;
+  }
+  .list{
+    background-color: var(--white);
+    border: solid 4px var(--black);
+    height: 300px;
+    contain: content;
+    overflow-y: scroll;
+    border-radius: 8px;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+  .startListText{
+    text-align: center;
+  }
+  .lineThrough{
+    text-decoration: line-through;
+  }    
+  .listItemDiv{
+    border-bottom: solid 1px var(--black);
+    margin: 20px 10px;
+  }
+  .time{
+    font-size: medium;
+  }
+  .listName{
+    width: 80%; 
+  }
+  .displayNone{
+    display: none;
+  }
+  @keyframes slideUp {
+    0%{
+      bottom: 0; 
+    }
+    75%{
+      bottom: 55px;
+    }
+    95%{
+      bottom: 45px;
+    }
+  }
+  @keyframes slideDown {
+    0%{
+      bottom: 700px; 
+    }
+  }
+  @keyframes bigSlideDown {
+    0%{
+      top: 700px; 
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .list{
+      height: 450px;
+    }
+  }

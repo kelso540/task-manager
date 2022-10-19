@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task-manager.css">
+    <script src="https://kit.fontawesome.com/0f62ced13f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div>
+        <div class='headDiv'>
+            <h1>Your Task Manager</h1>
+        </div>
+        <div class='headInfo'>
+            <h2>Start making your list!</h2>
+            <h2>Click the plus to add a task!</h2>
+        </div>
+        <div class='list'>
+            <div class='deleteDiv'>
+                <button class='deleteBtn'>Delete</button>
+            </div>
+            <div class="startListText">
+                <h4>This is your list!</h4>
+                <h4>Items will fill here...</h4>
+            </div>
+        </div>
+        <div class='displayNone'>
+            <h4>Yay! Type you task below!</h4>
+            <input type='text' placeholder='Type here' class='inputBox'/>
+            <button class='addTaskButton'>Add to list</button>
+            <i class='fa-solid fa-x closeX'></i>
+        </div>
+        <div class='addButton'>
+            <i class="fa-solid fa-plus fa-3x plusIcon"></i>
+        </div>
+    </div>
+    <script src="task-manager.js"></script>
+</body>
+</html>
